@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Parses and extracts the Open Graph Protocol definitions from HTML",
    "author" : [
       "ytnobody <ytnobody@gmail.com>"
    ],
@@ -52,6 +52,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ytnobody/p5-HTML-OGP/issues"
+      },
+      "homepage" : "https://github.com/ytnobody/p5-HTML-OGP",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/ytnobody/p5-HTML-OGP.git",
+         "web" : "https://github.com/ytnobody/p5-HTML-OGP"
+      }
+   },
    "version" : "0.01",
    "x_serialization_backend" : "JSON::PP version 4.06",
    "x_static_install" : 1
