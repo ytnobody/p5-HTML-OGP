@@ -8,8 +8,7 @@ our $VERSION = "0.01";
 sub parse {
     my ($class, $html) = @_;
     $html =~ s/[\r\n]//g;
-    my ($head) = $html =~ m|<head>(.+)</head>|i;
-    my @ogp = $head =~ m|(<meta .+?>)|gi;
+    my @ogp = $html =~ m|(<meta .+?>)|gi;
     @ogp = grep { $_ =~ m/(property|name)="(.+?:.+?)"/i } @ogp;
     my $result = {};
     my ($scheme, $name, $content);
