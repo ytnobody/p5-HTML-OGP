@@ -9,11 +9,11 @@ sub parse {
     my ($class, $html) = @_;
     $html =~ s/[\r\n]//g;
     my @ogp = $html =~ m|(<meta .+?>)|gi;
-    @ogp = grep { $_ =~ m/(property|name)="(.+?:.+?)"/i } @ogp;
+    @ogp = grep { $_ =~ m/(property|name)="(\w+?:\w+?)"/i } @ogp;
     my $result = {};
     my ($scheme, $name, $content);
     for my $o (@ogp) {
-        ($scheme, $name) = $o =~ m/(?:property|name)="(.+?):(.+?)"/i;
+        ($scheme, $name) = $o =~ m/(?:property|name)="(\w+?):(\w+?)"/i;
         ($content) = $o =~ m/content="(.+?)"/i;
         $result->{$scheme}{$name} = $content;
     }
